@@ -14,9 +14,11 @@ public class Test {
 
         TrieNode root = new TrieNode();
 
+        // Adding all the words in the Trie
         for (String word : words)
             root.add(word);
 
+        // Getting the words that match the given prefix (all of them, in this case)
         for (String prefix : prefixes) {
             System.out.print(prefix.toUpperCase() + ": ");
             List<String> wordList = root.getWords(prefix);
@@ -25,7 +27,13 @@ public class Test {
             }
             System.out.println();
         }
-
-
     }
+    /***
+     * Output:
+     *
+     * ANTI: antiaircraft, antiaircraftbody, antiaircraftbodyclimax, antiaircraftbodyclimaxseptic,
+     * AUTO: autobiography, autobiographyfocus, autobiographyfocusmobile, autobiographyfocusmobilepilot,
+     * CIRCUM: circumnavigate, circumnavigatescribe, circumnavigatescribevent,
+     * MACRO: macrocosm, macrocosmeconomics, macrocosmeconomicsstructure,
+     */
 }
